@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <p id="intro"></p>
+    <p id="Indeeptro"></p>
+    <ul id = "deeper"></ul>
+    <li id="DeadPooll"></li>
+    <li id="DeadPooyy"></li>
+
+    <script>
+        const friend = [{"name": "Bruno","age": 21}
+        ,{"name":"Nicolas","age": 37}
+        ,{"name":"Haland","age":47}];
+
+        let Myfriend = friend.map(f => (f.name + " ScoreResult : " + f.age))
+        console.log(Myfriend);
+        // console.log("Hello See me!?");
+        // console.log(23+17);
+        // window.alert("This SiteisSo Hot and Sexy")
+        let a,b,c;
+        a = 1;
+        b = 4;
+        c = a+b;
+        document.getElementById("deeper").innerHTML = Myfriend[0];
+        document.getElementById("DeadPooll").innerHTML = Myfriend[1];
+        document.getElementById("DeadPooyy").innerHTML = Myfriend[2];
+        document.getElementById("Indeeptro").innerHTML = c;
+        document.writeln(c);
+        // document.getElementById("intro").innerHTML = "Hello world <br/> Someone Send me here" // Hello world 
+                                                                                              // Someon Se-
+        // document.getElementById("intro").innerText = "Send <br/> me more" // Send <br/> me more
+        // document.getElementById("intro").textContent = "Send me <br/> Last" // Send me <br/> Last
+        // document.write("2237487");
+    </script>
+    
+    
+</body>
+</html>

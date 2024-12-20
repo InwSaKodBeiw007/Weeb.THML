@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 align = "center">Thanawat Poomikan</h1>
+    <h2 align = "center">66162110237-4</h2>
+    <br>
+    <br>
+    <p>
+        Plase Enter Number
+        <form>
+            <input type="text" id="input" onchange="check12()">
+        </form><br>
+        Choose What แม่สูตรคูณ u want 
+        <form>
+            <br><input type="text" id="MeeKoon" onchange="check123()"><br><br>
+            <button type="button" onclick="KoonSiMae()">Sum</button>
+        </form><br>
+    </p>
+    <label id="someoneNumber">Your Number Should Display Here!</label>&nbsp;&nbsp;&nbsp;
+    <label id="ThisMaekoon">Your แม่สูตรคูณ Should Display Here!</label>&nbsp;&nbsp;&nbsp;
+    <label id="AllInOne">This is summary field</label>
+    <script>
+        // console.log(document.getElementsByClassName("input"))
+        function check12(){
+            document.getElementById("someoneNumber").innerHTML = document.getElementById("input").value;
+        }
+        function check123(){
+            document.getElementById("ThisMaekoon").innerHTML = document.getElementById("MeeKoon").value;
+        }
+        function KoonSiMae(){
+            const somenumner = document.getElementById("input").value;
+            const Maekoon = document.getElementById("MeeKoon").value;
+            let Show_ThisToME = somenumner * Maekoon;
+
+            document.getElementById("AllInOne").innerHTML = Show_ThisToME;
+            return Show_ThisToME;
+        }
+    </script>
+</body>
+</html>

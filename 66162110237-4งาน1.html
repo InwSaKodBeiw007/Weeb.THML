@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div id="Myname" align = "center">
+        <h1>Thanawat Poomikan</h1>
+        <h1>66162110237-4</h1>
+    </div><br>
+    <form>
+        <label>Weight :&nbsp;</label>
+        <input type="text" id="weight" onchange="checkweight()"></br>
+        <label>Height :&nbsp;</label>
+        <input type="text" id="height" onchange="checkheight()">
+        
+        <button type="button" onclick="calculater()">Calculate BMI</button>
+    </form>
+    <div id="bmi_show">
+        <h2>Result : (below)</h2>
+        <p id="bmi"></p>
+        <p id="bmi_note"></p>
+    </div>
+    
+    <script>
+        function checkweight(){
+            console.log(document.getElementById("weight").value);
+        }
+        function checkheight() {
+            console.log(document.getElementById("height").value);
+        }
+        function calculater(){
+            const weight = document.getElementById("weight").value; //kg
+            const height = document.getElementById("height").value; //cm
+            const height_m = height / 100; //metre
+            const BMI = weight / (height_m * height_m); // BMI Main
+            BMI.toFixed(2);
+            let BMI_NOTE = ""; // Note That should show for customer
+            
+            if(BMI < 18.50){
+                BMI_NOTE += "youre Thin";
+            }else if(BMI => 18.50 && BMI <= 22.90){
+                BMI_NOTE += "youre Good Normal";
+            }else if(BMI => 23 && BMI <= 24.90){
+                BMI_NOTE += "youre Muscle Man";
+            }else {
+                BMI_NOTE += "youre faking Fat Go get WorkOut Now PLS<3"
+            }
+            document.getElementById("bmi").innerHTML = BMI;
+            document.getElementById("bmi_note").innerHTML = BMI_NOTE;
+        }
+        
+        /*
+        function AddBMI(){ // Can't use this TT!?
+        this.height = document.getElementById("height").value;
+        this.weight = document.getElementById("width").value;
+        }*/
+       
+       
+       
+    </script>
+</body>
+</html>
